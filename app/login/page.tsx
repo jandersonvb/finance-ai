@@ -13,8 +13,8 @@ export default async function LoginPage() {
   }
 
   return (
-    <div className="grid grid-cols-2 h-full">
-      <div className="flex flex-col h-full justify-center p-8 max-w-[550px] mx-auto">
+    <div className="grid h-full grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto flex h-full max-w-[550px] flex-col justify-center p-8">
         <Image
           src="/logo.svg"
           alt="Logo"
@@ -22,26 +22,27 @@ export default async function LoginPage() {
           height={39}
           className="mb-8"
         />
-        <h1 className="text-4xl font-bold mb-3">Bem-vindo</h1>
-        <p className="text-muted-foreground mb-8">A Finance AI é uma plataforma de gestão financeira que utiliza IA para monitorar suas movimentações, e oferecer insights personalizados, facilitando o controle do seu orçamento.</p>
+        <h1 className="mb-3 text-4xl font-bold">Bem-vindo</h1>
+        <p className="mb-8 text-muted-foreground">
+          A Finance AI é uma plataforma de gestão financeira que utiliza IA para
+          monitorar suas movimentações, e oferecer insights personalizados,
+          facilitando o controle do seu orçamento.
+        </p>
         <SignInButton>
           <Button variant="outline">
             <LogInIcon className="mr-2" />
             Fazer login
           </Button>
         </SignInButton>
-
       </div>
-
-      <div className="relative h-full w-full">
+      <div className="h-74 relative w-full md:h-full">
         <Image
           src="/login.png"
           alt="Faça login"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
       </div>
-
     </div>
   );
 }
